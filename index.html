@@ -72,8 +72,9 @@
 
 .bar {
 
-  position:sticky;
+ position:sticky;
   bottom: 0;
+  z-index: 100;
 
 
 }
@@ -96,7 +97,7 @@
 <section>
 
 
-  <div class="navbar bar bg-base-300 rounded-box">
+  <div class="navbar bar bg-base-300 box ">
     <div class="flex-1 px-2 lg:flex-none">
       <a class="text-lg font-bold">daisyUI</a>
     </div> 
@@ -104,7 +105,7 @@
       <div class="flex items-stretch">
         <a class="btn btn-ghost rounded-btn">Button</a>
         <div class="dropdown dropdown-end">
-          <label tabindex="0" class="btn btn-ghost rounded-btn">Which planet you want to know ?</label>
+          <label tabindex="0" class="btn btn-ghost rounded-btn">Planets</label>
           <ul tabindex="0" class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4">
             <li class="text-green-500"><a href="https://solarsystem.nasa.gov/planets/earth/overview/">Earth</a></li>
     <li class="text-green-500"><a href="https://solarsystem.nasa.gov/planets/mars/overview/">Mars</a></li>
