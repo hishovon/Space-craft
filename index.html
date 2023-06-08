@@ -27,7 +27,7 @@
     .typing-animation {
   display: inline-block;
   overflow: hidden;
-  white-space: pre;
+  white-space:nowrap;
   animation: typing 6s steps(500) forwards;
 }
 
@@ -39,18 +39,23 @@
     width:100%;
   }
 }
-/* 
-@media (max-width: 350px) {
-  .typing-animation {
-    font-size: 16px; /* Adjust the font size for smaller screens */
-  
- */
 
+@media (max-width: 390px) {
+  .typing-animation {
+    font-size: 12px;
+  white-space:pre-line;
+  padding: 4px; 
+  padding-left: 4px;
+  animation: typing 6s steps(500) forwards;
+}
+}
+  
+ 
 
 .image {
       display: inline-block;
       width: 100%;
-      height: 5%;
+      height: auto;
     
     }
 
@@ -63,56 +68,12 @@
       font-size: 16px;
     }
 
-
-
-
-/* Add the following CSS code to your existing styles or the <style> tag */
-
-/* Media query for iPhone 12 or similar devices */
-@media (max-width: 390px) {
-  .image {
-    height: auto; /* Allow the image to resize according to its aspect ratio */
-  }
-  
-  .caption {
-    font-size: 20px; /* Increase the font size for better readability */
-  }
-  
-  .typing-animation {
-    font-size: 14px; /* Adjust the font size for smaller screens */
-   width: auto;
-  }
-  
-  .fade-in {
-    text-align: center; /* Center the heading text */
-  }
-  
-  .text-xl {
-    font-size: 16px; /* Adjust the paragraph font size for smaller screens */
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </style>
 
 
     <title>Space-Analysis</title>
 </head>
-<body class=" bg-gradient-to-r from-slate-900 to-black">
+<body class=" bg-gradient-to-r from-slate-900 to-black h-full">
 
 
 
@@ -120,23 +81,9 @@
 <div class=" text-end">
 
  <img class="image" src="photo/milky-way-full-stars-space.jpg" alt="Your Image">
- <!-- <div class="text-end lg:mr-2 lg:mt-">
-  <select class="select p-2 text-white bg-gradient-to-r from-slate-900 to-black justify-end  w-full max-w-xs ">
-    <option disabled selected>Which Planet you want to see ?</option>
-    <option  class="bg-teal-700"> <a href="https://solarsystem.nasa.gov/"> Solar System </a> </option>
-    <option class="bg-teal-700"> <a href="https://solarsystem.nasa.gov/planets/earth/overview/.html"></a>Earth</option>
-    <option class="bg-teal-700">Mercury</option>
-    <option class="bg-teal-700">Venus</option>
-    <option class="bg-teal-700">Mars</option>
-    <option class="bg-teal-700">Jupiter</option>
-    <option class="bg-teal-700">Saturn</option>
-    <option class="bg-teal-700">Uranus</option>
-    <option class="bg-teal-700">Neptune</option>
-  </select>
-</div>  -->
+ 
 
-
-<div class="dropdown dropdown-top border border-violet-600 rounded  dropdown-end   ">
+<div class="dropdown  dropdown-buttom border border-violet-600 rounded dropdown-end   ">
   <label tabindex="0" class="btn m-1">Which planet you want to know ?</label>
   <ul tabindex="0" class="dropdown-content menu  p-2 shadow bg-base-100 rounded-box w-52">
     <li class="text-green-500"><a href="https://solarsystem.nasa.gov/solar-system/our-solar-system/overview/">Solar system</a></li>
@@ -162,7 +109,7 @@
 
 <div class=" mx-auto">
 
- <p class="text-slate-100 typing-animation  lg:pl-4 text-xl">Space is a vast and mysterious expanse that surrounds our planet Earth and extends to unimaginable distances. It is a vacuum devoid of air, sound, and gravity, filled with celestial objects like stars, planets, galaxies,<br> and more. The study of space, known as astronomy, has allowed us to gain insights into the origins and workings of the universe. Space exploration has seen significant milestones, including the first human  landing <br> on the moon. Satellites orbiting Earth provide crucial communication, navigation, and weather data. The extreme conditions of space, such as extreme temperatures and the absence of air, pose challenges for <br> human  exploration. Nonetheless, our fascination with space continues to drive scientific research and inspire new discoveries about our cosmic surroundings.</p>
+ <p class="text-slate-100 typing-animation lg:pl-4 text-xl">Space is a vast and mysterious expanse that surrounds our planet Earth and extends to unimaginable distances. It is a vacuum devoid of air, sound, and gravity, filled with celestial objects like stars, planets, galaxies,<br> and more. The study of space, known as astronomy, has allowed us to gain insights into the origins and workings of the universe. Space exploration has seen significant milestones, including the first human  landing <br> on the moon. Satellites orbiting Earth provide crucial communication, navigation, and weather data. The extreme conditions of space, such as extreme temperatures and the absence of air, pose challenges for <br> human  exploration. Nonetheless, our fascination with space continues to drive scientific research and inspire new discoveries about our cosmic surroundings.</p>
 
 </div>
 
