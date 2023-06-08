@@ -39,13 +39,12 @@
     width:100%;
   }
 }
-
-@media (max-width: 400px) {
+/* 
+@media (max-width: 350px) {
   .typing-animation {
-    font-size: 16px;
-    overflow: auto; /* Adjust the font size for smaller screens */
-  }
-}
+    font-size: 16px; /* Adjust the font size for smaller screens */
+  
+ */
 
 
 .image {
@@ -63,6 +62,49 @@
       width: 100%;  
       font-size: 16px;
     }
+
+
+
+
+/* Add the following CSS code to your existing styles or the <style> tag */
+
+/* Media query for iPhone 12 or similar devices */
+@media (max-width: 390px) {
+  .image {
+    height: auto; /* Allow the image to resize according to its aspect ratio */
+  }
+  
+  .caption {
+    font-size: 20px; /* Increase the font size for better readability */
+  }
+  
+  .typing-animation {
+    font-size: 14px; /* Adjust the font size for smaller screens */
+   width: auto;
+  }
+  
+  .fade-in {
+    text-align: center; /* Center the heading text */
+  }
+  
+  .text-xl {
+    font-size: 16px; /* Adjust the paragraph font size for smaller screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     </style>
@@ -94,9 +136,9 @@
 </div>  -->
 
 
-<div class="dropdown dropdown-top  dropdown-end   ">
+<div class="dropdown dropdown-top border border-violet-600 rounded  dropdown-end   ">
   <label tabindex="0" class="btn m-1">Which planet you want to know ?</label>
-  <ul tabindex="0" class="dropdown-content menu border-green-400 rounded p-2 shadow bg-base-100 rounded-box w-52">
+  <ul tabindex="0" class="dropdown-content menu  p-2 shadow bg-base-100 rounded-box w-52">
     <li class="text-green-500"><a href="https://solarsystem.nasa.gov/solar-system/our-solar-system/overview/">Solar system</a></li>
     <li class="text-green-500"><a href="https://solarsystem.nasa.gov/planets/earth/overview/">Earth</a></li>
     <li class="text-green-500"><a href="https://solarsystem.nasa.gov/planets/mars/overview/">Mars</a></li>
