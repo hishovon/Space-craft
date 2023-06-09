@@ -86,6 +86,40 @@
       font-size: 16px;
     }
 
+
+    #mars {
+      width: 400px;
+      height: 400px;
+      perspective: 800px;
+    }
+    
+    .planet {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transform: rotateY(45deg) rotateX(35deg);
+      animation: rotate 10s infinite linear;
+    }
+    
+    .planet .surface {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border-radius: 50%;
+      background-color: #ff3f00;
+      background-image: radial-gradient(#ff3f00 60%, #4b0000);
+      border: 10px solid #d94c00;
+    }
+    
+    @keyframes rotate {
+      0% { transform: rotateY(0) rotateX(0); }
+      100% { transform: rotateY(360deg) rotateX(360deg); }
+    }
+
+
+
+
     </style>
 
 
@@ -145,8 +179,25 @@
 
 </div>
 
-    
+
+<h1 class="text-6xl text-orange-500 pl-7 font-bold">Mars</h1>
 
 
+  <div class="grid grid-cols-2 lg:pl-12">
+<div id="mars">
+  <div class="planet ml-9">
+    <div class="surface">
+
+      <h1 class="text-sm font-medium text-white">Mars</h1>
+    </div>
+  </div>
+</div>
+
+<div>
+  <p class="text-slate-100 lg:pr-14  lg:pl-4 p-2 lg:text-xl align-middle text-base">Mars, often referred to as the "Red Planet," is the fourth planet from the Sun in our solar system. With a reddish appearance due to its iron oxide surface, Mars has captivated human curiosity for centuries. It is a rocky planet with a thin atmosphere primarily composed of carbon dioxide. Mars has polar ice caps, including frozen water and carbon dioxide. It is known for its prominent geological features, such as the largest volcano in the solar system, Olympus Mons, and Valles Marineris, a vast canyon system. Mars has been a focal point for scientific exploration, with ongoing missions aiming to uncover its past habitability and potential for human colonization.</p>
+</div>
+
+
+</div>
 </body>
 </html>
