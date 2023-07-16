@@ -43,29 +43,42 @@
 
 
 
-
-
-
-
+<!-- 
   <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>GSAP Animation</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-</head>
-<body>
-  <!-- Your content goes here -->
-  <div id="animatedElement">Hello, GSAP!</div>
+  <html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Typing Animation</title>
+  </head>
+  <body>
+     The element that will display the typing animation -->
+    <!-- <div id="typingElement"></div>
   
-  <script>
-    // GSAP animation code
-    gsap.from("#animatedElement", {
-      duration: 1, // Animation duration in seconds
-      opacity: 0, // Starting opacity
-      x: -50, // Starting X position
-      ease: "power2.out" // Easing function (optional)
-    });
-  </script>
-</body>
-</html>
+    <script>
+      // Text to be typed out
+      const textToType = "Hello, this is a typing animation.";
+  
+      // Speed of typing (in milliseconds per character)
+      const typingSpeed = 100;
+  
+      // Function to simulate typing animation
+      function typeText(text, targetElement, speed) {
+        let index = 0;
+        const intervalId = setInterval(() => {
+          targetElement.textContent += text.charAt(index);
+          index++;
+          if (index >= text.length) {
+            clearInterval(intervalId);
+          }
+        }, speed);
+      } -->
+   
+  //     // Call the typing function when the page loads
+  //     window.onload = () => {
+  //       const typingElement = document.getElementById("typingElement");
+  //       typeText(textToType, typingElement, typingSpeed);
+  //     };
+  //   </script>
+  // </body>
+  // </html>
+  

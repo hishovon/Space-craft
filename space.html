@@ -29,8 +29,8 @@
     .typing-animation {
   display: inline-block;
   overflow: hidden;
-  white-space:nowrap;
-  animation: typing 6s steps(500) forwards;
+  white-space:pre-line;
+  animation: typing 4s steps(500) forwards;
 }
 
 @keyframes typing {
@@ -162,7 +162,7 @@ background-image: url('../photos/beautiful-scenery-milky-way-galaxy-great-cool-b
     <div class="drawer-side ">
       <label for="my-drawer-4" class="drawer-overlay"></label>
       
-      <ul class="menu p-4 w-80 h-full bg-base-200 bg-gray-700 text-base-content">
+      <ul class="menu p-4 w-80 h-auto bg-base-200 bg-gray-700 text-base-content">
         <!-- Sidebar content here -->
         <p class="text-center lg:text-xl text-lg font-medium  text-white p-5">About Planets</p>
         <li class="text-green-500 "><a href="https://solarsystem.nasa.gov/planets/mars/overview/">Mars</a></li>
@@ -176,7 +176,7 @@ background-image: url('../photos/beautiful-scenery-milky-way-galaxy-great-cool-b
         <li class="text-green-500"><a href="https://solarsystem.nasa.gov/planets/solarsystem/overview/">SolarSystem</a></li>
 
       
-     <p class="text-start mt-2  lg:text-xl text-lg font-medium  text-teal-400 p-5">DWARAF PLANETS</p>
+     <p class="text-start lg:mt-2 mt-1  lg:text-xl text-lg font-medium  text-teal-400 p-5">DWARAF PLANETS</p>
    
         <li class="text-green-500   border"><a href="https://solarsystem.nasa.gov/planets/dwarf-planets/pluto/overview/">Pluto</a></li>
         <li class="text-green-500 border"><a href="https://solarsystem.nasa.gov/planets/dwarf-planets/haumea/in-depth/">Haumea</a></li>
@@ -233,7 +233,7 @@ background-image: url('../photos/beautiful-scenery-milky-way-galaxy-great-cool-b
 </div>
 
 <div>
-  <p  class="text-orange-600 lg:pr-14  lg:pl-4 p-2 lg:text-xl align-middle text-base">Mars, often referred to as the "Red Planet," is the fourth planet from the Sun in our solar system. With a reddish appearance due to its iron oxide surface, Mars has captivated human curiosity for centuries. It is a rocky planet with a thin atmosphere primarily composed of carbon dioxide. Mars has polar ice caps, including frozen water and carbon dioxide. It is known for its prominent geological features, such as the largest volcano in the solar system, Olympus Mons, and Valles Marineris, a vast canyon system. Mars has been a focal point for scientific exploration, with ongoing missions aiming to uncover its past habitability and potential for human colonization.</p>
+  <p id="typingElement" class="text-orange-600 lg:pr-14  lg:pl-4 p-2 lg:text-xl align-middle text-base"></p>
 </div>
 
 
@@ -249,11 +249,11 @@ background-image: url('../photos/beautiful-scenery-milky-way-galaxy-great-cool-b
 
 
 <div>
-  <div class="card  w-96 bg-base-100 shadow-xl hvr-bounce-out image-full">
+  <div  class="card  w-96 bg-base-100 shadow-xl hvr-bounce-out image-full">
     <figure><img src="photos/6864937_23324.jpg"  /></figure>
     <div class="card-body">
       <h2 class="card-title text-white">Earth</h2>
-      <p>Earth—our home planet—is the only place we know of so far that's inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.</p>
+      <p id="typingElement">Earth—our home planet—is the only place we know of so far that's inhabited by living things. It's also the only planet in our solar system with liquid water on the surface.</p>
       <div class="card-actions justify-end">
         <button class="btn btn-primary hvr-shutter-in-horizontal rounded">learn more</button>
       </div>
@@ -448,6 +448,31 @@ background-image: url('../photos/beautiful-scenery-milky-way-galaxy-great-cool-b
     });
   </script> 
 
+<script>
+  // Text to be typed out
+  const textToType = "Mars, often referred to as the Red Planet, is the fourth planet from the Sun in our solar system. With a reddish appearance due to its iron oxide surface, Mars has captivated human curiosity for centuries. It is a rocky planet with a thin atmosphere primarily composed of carbon dioxide. Mars has polar ice caps, including frozen water and carbon dioxide. It is known for its prominent geological features, such as the largest volcano in the solar system, Olympus Mons, and Valleys Mariners, a vast canyon system. Mars has been a focal point for scientific exploration, with ongoing missions aiming to uncover its past habitability and potential for human colonization.";
+
+  // Speed of typing (in milliseconds per character)
+  const typingSpeed = 10;
+
+  // Function to simulate typing animation
+  function typeText(text, targetElement, speed) {
+    let index = 0;
+    const intervalId = setInterval(() => {
+      targetElement.textContent += text.charAt(index);
+      index++;
+      if (index >= text.length) {
+        clearInterval(intervalId);
+      }
+    }, speed);
+  }
+
+  // Call the typing function when the page loads
+  window.onload = () => {
+    const typingElement = document.getElementById("typingElement");
+    typeText(textToType, typingElement, typingSpeed);
+  };
+</script>
 
 
 </body>
