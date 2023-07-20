@@ -91,3 +91,112 @@
     transform: scaleX(0);
   }
 
+
+  body {
+    background-color: #ffffff; /* Light mode background color */
+    color: #333333; /* Light mode text color */
+  }
+  
+  body.dark-mode {
+    background-color: #000000; /* Dark mode background color */
+    color: #ffffff; /* Dark mode text color */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color:  /* Light mode header background color */
+  }
+  
+  header.dark-mode {
+    background-color: rgb(0, 0, 0); /* Dark mode header background color */
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input[type="checkbox"] {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input[type="checkbox"]:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+
+  /* Light mode styles */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #333333;
+  }
+
+  header {
+    background-color: #f0f0f0;
+  }
+
+  .slider {
+    background-color: #ccc;
+  }
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  header {
+    background-color:;
+  }
+
+  .slider {
+    background-color: #666;
+  }
+}
+
+/* Responsive adjustments for the toggle */
+@media screen and (max-width: 480px) {
+  header {
+    flex-direction: column;
+  }
+
+  .switch {
+  
+  }
+}

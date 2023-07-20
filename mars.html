@@ -1,178 +1,134 @@
-<!-- <!-- <!-- <!DOCTYPE html>
-<html>
+<!-- <!DOCTYPE html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Dark Mode Toggle</title>
+
   <style>
-    body {
-      background-color: #000;
-    }
 
-    .earth {
-      width: 400px;
-      height: 400px;
-      background-image: url('earth.png');
-      background-size: cover;
-      border-radius: 50%;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      animation: rotate 10s linear infinite;
-    }
 
-    @keyframes rotate {
-      0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-      }
-      100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-      }
-    }
+body {
+  background-color: #ffffff; /* Light mode background color */
+  color: #333333; /* Light mode text color */
+}
+
+body.dark-mode {
+  background-color: black; /* Dark mode background color */
+  color: #ffffff; /* Dark mode text color */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+   /* Light mode header background color */
+}
+
+header.dark-mode {
+  background-color: #222222; /* Dark mode header background color */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input[type="checkbox"] {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input[type="checkbox"]:checked + .slider {
+  background-color: #2196F3;
+}
+
+input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+
+
   </style>
+
+
+
+
+
+
 </head>
 <body>
-  <div class="earth"></div>
+  <header>
+
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider"></span>
+    </label>
+  </header>
+  <script src="script.js"></script>
+
+
+
+
+<script>
+
+
+const darkModeToggle = document.getElementById('darkModeToggle');
+
+darkModeToggle.addEventListener('change', () => {
+  if (darkModeToggle.checked) {
+    document.body.classList.add('dark-mode');
+  } else {
+    document.body.classList.remove('dark-mode');
+  }
+});
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
-</html>
-  -->
-
-
-
-
-
-
-
-
-
-<!-- 
-  <!DOCTYPE html>
-  <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Typing Animation</title>
-  </head>
-  <body>
-     The element that will display the typing animation -->
-    <!-- <div id="typingElement"></div>
-  
-    <script>
-      // Text to be typed out
-      const textToType = "Hello, this is a typing animation.";
-  
-      // Speed of typing (in milliseconds per character)
-      const typingSpeed = 100;
-  
-      // Function to simulate typing animation
-      function typeText(text, targetElement, speed) {
-        let index = 0;
-        const intervalId = setInterval(() => {
-          targetElement.textContent += text.charAt(index);
-          index++;
-          if (index >= text.length) {
-            clearInterval(intervalId);
-          }
-        }, speed);
-      } -->
-<!--    
-  //     // Call the typing function when the page loads
-  //     window.onload = () => {
-  //       const typingElement = document.getElementById("typingElement");
-  //       typeText(textToType, typingElement, typingSpeed);
-  //     };
-  //   </script>
-  // </body>
-  // </html>
-  
-
-
- -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-  <!DOCTYPE html>
-<html>
-<head>
-  <title>Auto Vertical Carousel</title>
-  <style>
-    /* Basic styling for the carousel container */
-    .carousel {
-      display: flex;
-      flex-direction: column;
-      height: 400px; /* Set the desired height of the carousel container */
-      overflow: hidden;
-      border: 1px solid #ccc;
-      position: relative;
-    }
-
-    /* Styling for the carousel content */
-    .carousel-content {
-      display: flex;
-      flex-direction: column;
-      animation: scroll 10s linear infinite;
-    }
-
-    /* Keyframes animation for smooth scrolling */
-    @keyframes scroll {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-100%); }
-    }
-
-    /* Optional: Hide the scrollbar to make it look cleaner */
-    ::-webkit-scrollbar {
-      display: none;
-    }
-  </style>
-</head>
-<body>
-  <div class="h-96 carousel carousel-vertical rounded-box">
-    <div class="carousel-content">
-      <Your carousel items here -->
-      <!-- <div class="carousel-item h-full w-full">
-        <img src="photos/milky way/3d-space-background-with-fictional-planets-nebula.jpg" />
-      </div> 
-      <div class="carousel-item h-full w-full">
-        <img src="photos/milky way/7594515_3680368.jpg" />
-      </div> 
-      <div class="carousel-item h-full w-full">
-        <img src="photos/milky way/abstract-astronomy-glowing-spiral-galaxy-deep-space-generative-ai.jpg" />
-      </div> 
-      <div class="carousel-item h-full w-full">
-        <img src="photos/milky way/beautiful-colorful-galaxy-dark-starry-space.jpg" />
-      </div> 
-      <div class="carousel-item h-full w-full">
-        <img src="photos/fictional-planet-with-colourful-night-sky-stars-nebula.jpg" />
-      </div> 
-    </div>
-  </div>
-
-  <script>
-    // JavaScript to adjust the height of the carousel content based on the number of items
-    window.addEventListener('DOMContentLoaded', function () {
-      const carouselContent = document.querySelector('.carousel-content');
-      const itemHeight = carouselContent.firstElementChild.offsetHeight;
-
-      carouselContent.style.height = `${itemHeight * carouselContent.children.length}px`;
-    });
-  </script>
-</body>
-</html> 
-
- -->
-
-
- 
- 
+</html> -->
